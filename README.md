@@ -1,8 +1,19 @@
-# React + Vite
+# ReactJS Reveal Image
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+> ⚠️ **Warning:** This is just an entertainment project and does not carry a professional format.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Introduction
+
+In this project, we'll implement an effect based on the Magnifier Image feature. The goal is to create a visual effect where an underlay image is revealed when you hover over the cover image.
+
+### Features
+- Reveal underlay image on hover
+- Smooth transition effect
+- Simple and clean design
+
+### TechStack
+- ReaectJS 
+- Vite
+- Tailwind Css
