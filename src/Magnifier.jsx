@@ -2,6 +2,8 @@ import {useState, useEffect} from 'react'
 
 const Magnifier = ({img, revealImg, revealSize}) => {
 
+  // The revealSize in 
+
     const [showMagnifier, setShowMagnifier] = useState(false)
     // used to set position of magnifier relatively inside this component
     const [cursorPosition, setCursorPosition] = useState({x: 0, y: 0})
@@ -53,8 +55,10 @@ const Magnifier = ({img, revealImg, revealSize}) => {
             backgroundImage: `url(${revealImg})`,
             backgroundPosition: ` ${cursorPosition.x < revealSize/2 ?'':'-'}${Math.abs(cursorPosition.x - revealSize/2)}px ${cursorPosition.y < revealSize/2 ?'':'-'}${Math.abs(cursorPosition.y-revealSize/2)}px`,
             backgroundRepeat: 'no-repeat',
+            height: `${revealSize}px`,
+            width: `${revealSize}px`,
         }}
-        className={`h-[${revealSize}px] w-[${revealSize}px] border-2 rounded-full  border-primary`}>
+        className={` border-2 rounded-full  border-primary`}>
       </div>
 
     </div>
