@@ -16,6 +16,14 @@ const Magnifier = ({img, revealImg, revealSize}) => {
         setCursorPosition({x: e.clientX - left, y: e.clientY - top})
     }
 
+    const handleTouchMove = (e) => {
+        const {top, left } = e.target.getBoundingClientRect();
+        const touch = e.touches[0]
+        
+        // must subtract left and top to get position relatively to this component
+        setCursorPosition({x: touch.clientX - left, y: touch.clientY - top})
+    }
+
     // Need to set cursor position when mouse enter to get correct position
     // Incase page is loaded and mouse is already inside component, 
     //  if not set cursor position, magnifier will be shown at wrong position
@@ -37,7 +45,7 @@ const Magnifier = ({img, revealImg, revealSize}) => {
         onMouseEnter={handleMouseEnter}
         onMouseLeave={()=>setShowMagnifier(false)}
         onMouseMove={handleMouseMove}
-        onTouchMove={handleMouseMove}
+        onTouchMove={handleTouchMove}
       />
       
 
