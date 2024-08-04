@@ -10,16 +10,19 @@ const useDeviceType = () => {
             } else {
                 setDeviceType('desktop');
             }
-        }
+        };
+
+        // Call handleResize once to set the initial device type
+        handleResize();
 
         window.addEventListener('resize', handleResize);
 
         return () => {
             window.removeEventListener('resize', handleResize);
-        }
-    }, [deviceType]);
+        };
+    }, []);
 
     return deviceType;
- }
+};
 
- export default useDeviceType;
+export default useDeviceType;
