@@ -37,6 +37,7 @@ const Magnifier = ({img, revealImg, revealSize}) => {
         onMouseEnter={handleMouseEnter}
         onMouseLeave={()=>setShowMagnifier(false)}
         onMouseMove={handleMouseMove}
+        onTouchMove={handleMouseMove}
       />
       
 
