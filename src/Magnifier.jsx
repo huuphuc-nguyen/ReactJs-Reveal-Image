@@ -32,7 +32,15 @@ const Magnifier = ({img, revealImg, revealSize}) => {
         setCursorPosition({x: e.clientX - left, y: e.clientY - top})
     
         setShowMagnifier(true)
-    }   
+    }
+    
+    const handleTouch = (e) => {
+        const {top, left} = e.target.getBoundingClientRect();
+        const touch = e.touches[0]
+        setCursorPosition({x: touch.clientX - left, y: touch.clientY - top})
+    
+        setShowMagnifier(true)
+    }
 
   return (
     <div 
@@ -46,6 +54,7 @@ const Magnifier = ({img, revealImg, revealSize}) => {
         onMouseLeave={()=>setShowMagnifier(false)}
         onMouseMove={handleMouseMove}
         onTouchMove={handleTouchMove}
+        onTouchStart={handleTouch}
       />
       
 
