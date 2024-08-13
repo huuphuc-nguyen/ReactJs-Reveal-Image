@@ -15,12 +15,14 @@ function App() {
       { displayImg: 'https://i.ibb.co/JRsMXSm/2-1-1280.png', revealImg: 'https://i.ibb.co/3r5dKt1/2-2-1280.png' },
       { displayImg: 'https://i.ibb.co/0tY8PbF/3-1-1280.jpg', revealImg: 'https://i.ibb.co/bPhmdDy/3-2-1280.jpg' },
       { displayImg: 'https://i.ibb.co/7JqQd4g/4-1-1280.png', revealImg: 'https://i.ibb.co/jk0vKwG/4-2-1280.png' },
+      { displayImg: 'https://i.ibb.co/9WVSqNz/5-1-1280.jpg', revealImg: 'https://i.ibb.co/LvQprWF/5-2-1280.jpg' },
     ],
     mobile: [
       { displayImg: 'https://i.ibb.co/jHWFFLJ/1-1-300.jpg', revealImg: 'https://i.ibb.co/bWdqdKr/1-2-300.jpg' },
       { displayImg: 'https://i.ibb.co/ZVrzJKM/2-1-300.png', revealImg: 'https://i.ibb.co/mzpVmhn/2-2-300.png' },
       { displayImg: 'https://i.ibb.co/9rT8R3Q/3-1-300.jpg', revealImg: 'https://i.ibb.co/s5F7Xr0/3-2-300.jpg' },
       { displayImg: 'https://i.ibb.co/k5M5Wkp/4-1-300.png', revealImg: 'https://i.ibb.co/qgTCKgN/4-2-300.png' },
+      { displayImg: 'https://i.ibb.co/ZN8PcTV/5-1-300.jpg', revealImg: 'https://i.ibb.co/18ZdqmK/5-2-300.jpg' },
     ],
   };
 
@@ -30,12 +32,14 @@ function App() {
       { width: 496, height: 788 },
       { width: 800, height: 565 },
       { width: 1280, height: 724 },
+      { width: 828, height: 1308 },
     ],
     mobile: [
       { width: 300, height: 611 },
       { width: 300, height: 477 },
       { width: 300, height: 212 },
       { width: 300, height: 170 },
+      { width: 300, height: 474 },
     ],
   };
 
@@ -53,7 +57,7 @@ function App() {
     const selectedId = e.target.value;
     const selectedImages = deviceType === 'desktop' ? images.desktop : images.mobile;
     const selectedDimensions = deviceType === 'desktop' ? data.desktop : data.mobile;
-
+    
     setCurrentSetImage(selectedImages[selectedId]);
     setDimensions(selectedDimensions[selectedId]);
   };
@@ -80,6 +84,7 @@ function App() {
             <option value="1">Giường</option>
             <option value="2">Nằm</option>
             <option value="3">Bò</option>
+            <option value="4">Cửa sổ</option>
           </select>
 
           <div className='-mt-6'>
